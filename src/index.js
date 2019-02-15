@@ -1,15 +1,16 @@
+import {BrowserRouter as Router} from 'react-router-dom';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-
-class App extends Component{
-    render(){
-        return(<div>App</div>)
-    }
-}
+import {Routes} from './routes';
+// import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-    <App />,
+    <Router>
+        <Routes/>
+    </Router>,
     document.getElementById('app')
 );
+
+// registerServiceWorker();
 
 module.hot.accept();
